@@ -8,6 +8,7 @@
 	position: relative;
 	background-color: rgb(18, 119, 234);
 	height: 55vh;
+	animation: sky 4s ease;
 }
 .sun {
 	margin-top: 50px;
@@ -25,7 +26,7 @@
 	background-color: rgb(44, 30, 30);
 }
 .grass {
-	position: relative;
+	// position: relative;
 	height: 20vh;
 	background-color: #2a9f43;
 }
@@ -35,3 +36,90 @@
 	height: 10vh;
 	background-color: #464343;
 }
+.car {
+	margin-top: -10px;
+	margin-left: 50%;
+	position: absolute;
+	width: 150px;
+	height: 70px;
+	background-color: orangered;
+	border-radius: 20px;
+}
+.car::after,
+.car::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 40px;
+	height: 35px;
+	background-color: orangered;
+}
+
+.car::after {
+	right: -20px;
+	border-top-right-radius: 10px;
+}
+
+.car::before {
+	left: -20px;
+}
+
+.front-window {
+	position: absolute;
+	margin-top: 3px;
+	height: 32px;
+	width: 45px;
+	background-color: blue;
+	border-top-left-radius: 40%;
+}
+
+.rear-window {
+	position: absolute;
+	margin-left: 105px;
+	margin-top: 3px;
+	height: 32px;
+	width: 45px;
+	background-color: blue;
+	border-top-right-radius: 40%;
+}
+
+.front-wheel {
+	margin-top: 46px;
+	position: absolute;
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	background-color: black;
+	z-index: 1;
+}
+.rear-wheel {
+	margin-left: 105px;
+	margin-top: 46px;
+	position: absolute;
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	background-color: black;
+	z-index: 1;
+}
+
+@keyframes sky {
+	0% {
+		background-color: rgb(18, 119, 234);
+	}
+	50% {
+		background-color: rgb(9, 9, 64);
+	}
+	100% {
+		background-color: rgb(3, 3, 9);
+	}
+}
+@keyframes sun {
+	from{
+
+	}
+	to{
+		
+	}
+} 
+	
