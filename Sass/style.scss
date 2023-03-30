@@ -7,7 +7,7 @@
 .sky {
 	position: relative;
 	background-color: rgb(18, 119, 234);
-	height: 70vh;
+	height: 55vh;
 }
 .sun {
 	margin-top: 50px;
@@ -19,4 +19,19 @@
 	border-radius: 50%;
 	border: 2px solid #d191077c;
 	box-shadow: 0px 0px 50px 5px rgb(248, 172, 8);
+}
+.ground {
+	height: 45vh;
+	background-color: rgb(44, 30, 30);
+}
+.grass {
+	position: relative;
+	height: 20vh;
+	background-color: #2a9f43;
+}
+.road {
+	position: relative;
+	top: -37%;
+	height: 10vh;
+	background-color: #464343;
 }
