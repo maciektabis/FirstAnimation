@@ -3,12 +3,14 @@
 	margin: 0;
 	padding: 0;
 }
-
+body {
+	overflow: hidden;
+}
 .sky {
 	position: relative;
 	background-color: rgb(18, 119, 234);
 	height: 55vh;
-	animation: sky 4s ease;
+	animation: sky 5s linear 1;
 }
 .sun {
 	margin-top: 50px;
@@ -20,7 +22,7 @@
 	border-radius: 50%;
 	border: 2px solid #d191077c;
 	box-shadow: 0px 0px 50px 5px rgb(248, 172, 8);
-	animation: sun 4s;
+	animation: sun 5s linear 1;
 }
 .ground {
 	height: 45vh;
@@ -45,6 +47,8 @@
 	height: 70px;
 	background-color: orangered;
 	border-radius: 20px;
+	animation: car 3s linear 1;
+	animation-fill-mode: forwards;
 }
 .car::after,
 .car::before {
@@ -90,8 +94,10 @@
 	height: 35px;
 	width: 35px;
 	border-radius: 50%;
+	border: 2px silver dashed;
 	background-color: black;
 	z-index: 1;
+	animation: wheel 3s linear infinite;
 }
 .rear-wheel {
 	margin-left: 105px;
@@ -100,27 +106,50 @@
 	height: 35px;
 	width: 35px;
 	border-radius: 50%;
+	border: 2px silver dashed;
+	animation: wheel 3s linear infinite;
 	background-color: black;
 	z-index: 1;
 }
 
 @keyframes sky {
 	0% {
-		background-color: rgb(18, 119, 234);
+		background-color: rgb(3, 3, 9);
 	}
 	50% {
-		background-color: rgb(9, 9, 64);
+		background-color: rgb(18, 119, 234);
 	}
 	100% {
-		background-color: rgb(3, 3, 9);
+		background-color: rgb(9, 9, 64);
 	}
 }
 @keyframes sun {
+	0% {
+		top: 500px;
+	}
+	40% {
+		top: 100px;
+	}
+	60% {
+		top: 100px;
+	}
+	100% {
+		top: 500px;
+	}
+}
+@keyframes car {
 	from {
-		margin-top: 50px;
+		left: -1500px;
 	}
 	to {
-		margin-top: 600px;
-		display: none;
+		left: 1500px;
+	}
+}
+@keyframes wheel {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
 	}
 }
